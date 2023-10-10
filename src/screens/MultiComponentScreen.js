@@ -12,12 +12,15 @@ const DividerLine = () => {
 const ContainerScreen = ({ navigation: { navigate} }) => {
     return <View style={{flexDirection: 'column', alignItems: 'center'}}>
     <Text>Container Screen</Text>
+    <Button onPress={() => navigate('TrackApp')} title="TrackApp" />
     <DividerLine/>
     <Buttons onPress={() => navigate('Navigate')}/>
     <DividerLine/>
     <Button onPress={() => navigate('Position')} title="PositionScreens" />
     <DividerLine/>
     <Button onPress={() => navigate('FetchScreen')} title="FetchScreen" />
+    <DividerLine/>
+    <Button onPress={() => navigate('NoFetchScreen')} title="NoFetchScreen" />
     <DividerLine/>
     <InputText/>
     <DividerLine/>

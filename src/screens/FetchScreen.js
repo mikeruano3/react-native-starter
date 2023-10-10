@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { View, Text } from "react-native"
 import yelp from "../api/yelp"
+import ResultList from "../components/ResultList"
 
 const FecthScreen = () => {
     const [ results, setResults ] = useState([])
@@ -19,10 +20,7 @@ const FecthScreen = () => {
     })
 
     return (
-        <View>
-            <Text>Fecthed data</Text>
-            <Text>{JSON.stringify(results)}</Text>
-        </View>
+        results ? <ResultList results={results} title="Results"/> : <Text>No results</Text>
     )
 }
 
